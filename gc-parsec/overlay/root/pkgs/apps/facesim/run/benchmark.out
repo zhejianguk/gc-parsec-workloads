@@ -1,0 +1,5 @@
+/home/centos/parsec_gc/bin/parsecmgmt: line 1222: /home/centos/parsec_gc/pkgs/apps/facesim/inst/amd64-linux.gcc/bin/facesim: cannot execute binary file
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s

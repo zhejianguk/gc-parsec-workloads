@@ -1,0 +1,9 @@
+{
+  "name" : "gc-parsec",
+  "base" : "br-base.json",
+  "overlay" : "overlay",
+  "rootfs-size": "1GB",
+  "host-init" : "host-init.sh",
+  "guest-init" : "guest-init.sh"
+  
+}
