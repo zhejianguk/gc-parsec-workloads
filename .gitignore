@@ -3,4 +3,4 @@
 *.o
 *SPEC_CPU2006v1.2
 *.tar.gz
-*/pkgs/*
+gc-parsec/overlay/root/pkgs/*
