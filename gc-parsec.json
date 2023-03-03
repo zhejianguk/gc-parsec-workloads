@@ -3,5 +3,17 @@
   "base" : "br-base.json",
   "overlay" : "overlay",
   "host-init" : "host-init.sh",
-  "guest-init" : "guest-init.sh"
+  "guest-init" : "guest-init.sh",
+  "jobs" : [
+    {
+      "name" : "blackscholes",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss - w blackscholes && poweroff -f"
+    },
+    {
+      "name" : "dedup",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss - w dedup && poweroff -f"
+    }
+  ]
 }
