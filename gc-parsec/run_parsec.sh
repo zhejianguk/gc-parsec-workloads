@@ -1,9 +1,10 @@
 #!/bin/bash
 
 gc_kernel=none
+pc_workload=none
 
 # Input flags
-while getopts k:w flag
+while getopts k:w: flag
 do
 	case "${flag}" in
 		k) gc_kernel=${OPTARG};;
@@ -17,12 +18,26 @@ arch=amd64-linux # Revist: currently is the arch of the host machine
 cd /root/pkgs
 cp ./libgomp.so.1 /usr/lib64/
 
-BENCHMARKS=(${pc_workload})
+if [ $pc_workload != "none" ]; then 
+    BENCHMARKS=(${pc_workload})
+fi
+
+if [ $pc_workload == "none" ]; then 
+    BENCHMARKS=(blackscholes bodytrack dedup facesim ferret fluidanimate freqmine streamcluster swaptions x264)
+fi
+
 base_dir=$PWD
 
-if [ $gc_kernel != "none" ]; then 
+if [ $gc_kernel != "none" ]; then
+    echo "./initialisation_${gc_kernel}.riscv"
     ./initialisation_${gc_kernel}.riscv
 fi
+
+if [ $gc_kernel == "ss" ]; then
+    echo "./gc_checker_ss.riscv &"
+    #  ./gc_checker_ss.riscv &
+fi
+
 
 for benchmark in ${BENCHMARKS[@]}; do
     sub_dir=apps
