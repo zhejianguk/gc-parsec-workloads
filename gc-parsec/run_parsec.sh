@@ -33,12 +33,6 @@ if [ $gc_kernel != "none" ]; then
     ./initialisation_${gc_kernel}.riscv
 fi
 
-if [ $gc_kernel == "ss" ]; then
-    echo "./gc_checker_ss.riscv &"
-    #  ./gc_checker_ss.riscv &
-fi
-
-
 for benchmark in ${BENCHMARKS[@]}; do
     sub_dir=apps
     if [ $benchmark == "dedup" ]; then 
