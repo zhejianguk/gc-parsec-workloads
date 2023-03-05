@@ -8,12 +8,52 @@
     {
       "name" : "blackscholes",
       "outputs" : [],
-      "run" : "./run_parsec.sh -k ss - w blackscholes && poweroff -f"
+      "run" : "./run_parsec.sh -k ss -w blackscholes && poweroff -f"
+    },
+    {
+      "name" : "bodytrack",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w bodytrack && poweroff -f"
     },
     {
       "name" : "dedup",
       "outputs" : [],
-      "run" : "./run_parsec.sh -k ss - w dedup && poweroff -f"
+      "run" : "./run_parsec.sh -k ss -w dedup && poweroff -f"
+    },
+    {
+      "name" : "facesim",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w facesim && poweroff -f"
+    },
+    {
+      "name" : "ferret",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w ferret && poweroff -f"
+    },
+    {
+      "name" : "fluidanimate",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w fluidanimate && poweroff -f"
+    },
+    {
+      "name" : "freqmine",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w freqmine && poweroff -f"
+    },
+    {
+      "name" : "streamcluster",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w streamcluster && poweroff -f"
+    },
+    {
+      "name" : "swaptions",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w swaptions && poweroff -f"
+    },
+    {
+      "name" : "x264",
+      "outputs" : [],
+      "run" : "./run_parsec.sh -k ss -w x264 && poweroff -f"
     }
   ]
 }
